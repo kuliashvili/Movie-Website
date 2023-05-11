@@ -1,41 +1,40 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import MovieList from './components/MovieList';
+import MovieListHeading from './components/MovieListHeading';
+import SearchBox from './components/SearchBox';
 
 function App() {
 
-  const [movies, setMovies] = useState([
-    {
-      Title: 'Star Wars: Episode IV - A New Hope',
-      Year: '1997',
-      imdbID: 'tt0076759',
-      Type: 'movie',
-      Poster: "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
-    },
-    {
-      Title: 'Star Wars: Episode IV - A New Hope',
-      Year: '1997',
-      imdbID: 'tt0076759',
-      Type: 'movie',
-      Poster: "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
-    },
-    {
-      Title: 'Star Wars: Episode IV - A New Hope',
-      Year: '1997',
-      imdbID: 'tt0076759',
-      Type: 'movie',
-      Poster: "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
+  const [movies, setMovies] = useState([])
+  const [searchValue, setSearchValue] = useState('')
+
+  const getMovieRecuest = async (searchValue) => {
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`
+    // const url = "http://www.omdbapi.com/?i=tt3896198&apikey=7edb1dc9"
+
+    const response = await fetch(url)
+    const responseJson = await response.json()
+
+
+    if (responseJson.Search){
+      setMovies(responseJson.Search)
     }
-  ])
+   
 
-  const getMovieRecuest = () => {
-    const url = "http://www.omdbapi.com/?i=tt3896198&apikey=7edb1dc9"
-
-    const response = await fetch()
   }
+
+  useEffect(() => {
+    getMovieRecuest(searchValue)
+  }, [searchValue])
+
+  
   return (
     <div className="App">
-     
+     <div className='row'>
+      <MovieListHeading heading = 'Movies List' />
+      <SearchBox searchValue = {searchValue}  setSearchValue = {setSearchValue}/>
+     </div>
      <div className='row'>
     <MovieList movies = {movies} />
      </div>
