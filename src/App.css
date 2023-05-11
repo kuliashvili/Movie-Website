@@ -20,3 +20,11 @@ body {
     /* cursor: -webkit-grab; */
     /* Safari */
 }
+
+.item {
+    padding: 20px;
+}
+
+.item-img {
+    border-radius: 14px;
+}
