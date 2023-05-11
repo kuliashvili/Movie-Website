@@ -28,6 +28,9 @@ function App() {
     }
   ])
 
+  const getMovieRecuest = () => {
+    const url = "http://www.omdbapi.com/?i=tt3896198&apikey=7edb1dc9"
+  }
   return (
     <div className="App">
      
