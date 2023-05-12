@@ -24,11 +24,22 @@
     }
     
     .item {
-        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        position: relative;
+        transition: transform 0.2s;
     }
     
     .item-img {
         border-radius: 14px;
+        transition: all .2s;
+    }
+    
+    .item-img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
     }
     
     .searchbox {
@@ -40,4 +51,24 @@
     
     .header {
         margin-left: 30px;
+    }
+    
+    .item-img:hover+.overlay {
+        opacity: 1;
+    }
+    
+    .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        width: 290px;
+        height: 50px;
+        transition: 0.5s ease;
+        opacity: 0;
+        bottom: 0;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
     }
