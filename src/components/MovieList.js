@@ -9,7 +9,7 @@ export default function MovieList(props) {
    {props.movies.map((movie, index) => 
    <div className='item'>
     <img className='item-img' src={movie.Poster} alt="movie" />
-    <div className='overlay'>
+    <div onClick={() => props.handleFavouritesClick(movie)} className='overlay'>
     < FavouriteComponent />
     </div>
     </div>)}
