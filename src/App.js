@@ -3,10 +3,12 @@ import './App.css';
 import MovieList from './components/MovieList';
 import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
+import AddFavourites from './components/AddFavourites'
 
 function App() {
 
   const [movies, setMovies] = useState([])
+  const [favourites, setFavourites] = useState([])
   const [searchValue, setSearchValue] = useState('')
 
   const getMovieRecuest = async (searchValue) => {
@@ -28,6 +30,11 @@ function App() {
     getMovieRecuest(searchValue)
   }, [searchValue])
 
+  const addFavouriteMovie = (movie) => {
+      const newFavouriteList = [...favourites, movie]
+      setFavourites(newFavouriteList)
+  }
+
   
   return (
     <div className="App">
@@ -36,7 +43,7 @@ function App() {
       <SearchBox searchValue = {searchValue}  setSearchValue = {setSearchValue}/>
      </div>
      <div className='row'>
-    <MovieList movies = {movies} />
+    <MovieList movies = {movies} handleFavouritesClick={addFavouriteMovie}  FavouriteComponent = {AddFavourites}/>
      </div>
     
     </div>
