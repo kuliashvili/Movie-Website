@@ -37,11 +37,6 @@
         transition: all .2s;
     }
     
-    .item-img:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-    
     .searchbox {
         height: 36px;
         width: 200px;
@@ -53,26 +48,46 @@
         margin-left: 30px;
     }
     
-    .item-img:hover+.overlay {
-        opacity: 1;
-    }
-    
     .overlay {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
         background: rgba(15, 15, 15, 0.8);
-        width: 290px;
+        width: 300px;
         height: 50px;
-        transition: 0.5s ease;
+        transition: 0.3s;
         opacity: 0;
         bottom: 0;
         font-size: 20px;
         padding: 20px;
         text-align: center;
+        padding: 0;
     }
     
-    .item-img:active+.overlay {
-        background-color: #cac5c5;
+    .overlay:hover {
+        cursor: pointer;
+        opacity: 1;
+        /* transform: scale(1.1); */
+    }
+    
+    .item-img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    /* .overlay:hover+.item-img {
+        transform: scale(1.1);
+    }
+    
+    .item-img:hover+.overlay {
+        transform: scale(1.1);
+    }
+    
+    .item-img:hover+.overlay {
+        opacity: 1;
+    } */
+    
+    .item-img:hover+.overlay {
+        opacity: 1;
+        transform: scale(1.1);
     }

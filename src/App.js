@@ -45,6 +45,17 @@ function App() {
      <div className='row'>
     <MovieList movies = {movies} handleFavouritesClick={addFavouriteMovie}  FavouriteComponent = {AddFavourites}/>
      </div>
+
+     <div className='row'>
+      <MovieListHeading heading = 'Favourites' />
+    
+     </div>
+     <div className='row'>
+
+    <MovieList movies = {favourites} 
+               handleFavouritesClick={addFavouriteMovie}  
+              FavouriteComponent = {AddFavourites}/>
+     </div>
     
     </div>
   );
