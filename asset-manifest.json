@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/Anime-Website/static/css/main.073c9b0a.css",
-    "main.js": "/Anime-Website/static/js/main.6829b8c0.js",
-    "static/js/787.39e0fdc8.chunk.js": "/Anime-Website/static/js/787.39e0fdc8.chunk.js",
-    "static/media/logo.svg": "/Anime-Website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/Anime-Website/index.html",
-    "main.073c9b0a.css.map": "/Anime-Website/static/css/main.073c9b0a.css.map",
-    "main.6829b8c0.js.map": "/Anime-Website/static/js/main.6829b8c0.js.map",
-    "787.39e0fdc8.chunk.js.map": "/Anime-Website/static/js/787.39e0fdc8.chunk.js.map"
+    "main.css": "/Movie-website/static/css/main.881c21bb.css",
+    "main.js": "/Movie-website/static/js/main.1414732f.js",
+    "static/js/787.39e0fdc8.chunk.js": "/Movie-website/static/js/787.39e0fdc8.chunk.js",
+    "index.html": "/Movie-website/index.html",
+    "main.881c21bb.css.map": "/Movie-website/static/css/main.881c21bb.css.map",
+    "main.1414732f.js.map": "/Movie-website/static/js/main.1414732f.js.map",
+    "787.39e0fdc8.chunk.js.map": "/Movie-website/static/js/787.39e0fdc8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.6829b8c0.js"
+    "static/css/main.881c21bb.css",
+    "static/js/main.1414732f.js"
   ]
 }
